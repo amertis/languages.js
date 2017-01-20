@@ -1,5 +1,5 @@
 // From node the module is accesible with a simple require
-var languages = require ('../languages.min.js');
+var languages = require ('../languages.js');
 var num_languages = 0;
 
 // languages.getAllLanguageCode() return an array of all ISO 639-1 language code supported
@@ -15,3 +15,6 @@ console.log("Languages supported: "+num_languages);
 // test languages.isValid(langcode) function
 console.log("¿isValid 'kaka' language code? "+languages.isValid('kaka'));
 console.log("¿isValid 'es' language code? "+languages.isValid('es'));
+
+console.log('Language English is: ' + languages.getLanguageCode('English'))
+console.log('Language Greek is: ' + languages.getLanguageCode('Greek'))

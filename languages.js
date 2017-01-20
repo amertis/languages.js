@@ -249,5 +249,14 @@ exports.getLanguageInfo = function(langcode) {
   return result;
 };
 
+exports.getLanguageCode = function(language) {
+  for (var prop in langs.lang) {
+    if (langs.lang[prop].indexOf(language) != -1) {
+      return prop
+    }
+  }
+  return language
+}
+
 //allow executing by nodejs in the server or by javascript in the browser
 })(typeof exports === 'undefined'? this['languages']={}: exports);
